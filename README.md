@@ -1,14 +1,16 @@
-# Sistema de Gestão de Hotel - Hotel Descanso Garantido
+# Trabalho de Aeds - Hotel Descanso Garantido
 
-Nome: Matheus Santos Gomes
-
-Matrícula: 629910
+Nome: Kaiky Keven de Oliveira Castro
 
 ## Descrição
 
-Este é um sistema de gestão para um hotel fictício chamado "Hotel Descanso Garantido". O sistema permite o cadastro de clientes, funcionários, quartos e estadias, além de realizar consultas e baixar estadias. A seguir, uma explicação detalhada sobre cada funcionalidade.
+O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, com um forte compromisso em proporcionar um excelente atendimento e fidelizar seus clientes. O hotel conta com uma equipe composta por recepcionistas, auxiliares de limpeza, garçons e um gerente. Até o momento, o hotel realizava o controle de estadias, clientes e funcionários através de planilhas do Excel e registros em cadernos, o que frequentemente resultava em problemas organizacionais, incluindo conflitos de reserva, onde um mesmo quarto era reservado para mais de um cliente. Por isso, foi desenvolvido um sistema em linguagem C para resolver esses problemas e melhorar a eficiência operacional.
 
-## Funcionalidades
+## Bibliotecas Usadas
+
+* **stdio.h**: possui as funções printf e scanf em C são essenciais para exibir dados formatados na tela e capturar entrada do usuário, respectivamente. Enquanto fprintf e fscanf são usadas para escrever e ler dados formatados em arquivos, permitindo manipulação eficiente de informações em contextos de armazenamento persistente. Essas funções são fundamentais para a interação com o usuário e para o processamento de dados em programas C.
+* **stdlib.h**: é usada para alocar os itens dinamicamente na memória.
+* **string.h**: é uma biblioteca que traz diversas funções importantes sobre string, uma das usadas no trabalho foi a 'strcmp'
 
 ### Menu
 
