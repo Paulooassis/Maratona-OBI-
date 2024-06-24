@@ -25,6 +25,7 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
 5. Dar Baixa em Estadia
 6. Pesquisar
 7. Sair
+   
 ====================================
 Digite a opcao desejada: 
 
