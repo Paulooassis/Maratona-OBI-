@@ -8,9 +8,9 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
 
 ## Bibliotecas Usadas
 
-* **stdio.h**: possui as funções printf e scanf em C são essenciais para exibir dados formatados na tela e capturar entrada do usuário, respectivamente. Enquanto fprintf e fscanf são usadas para escrever e ler dados formatados em arquivos, permitindo manipulação eficiente de informações em contextos de armazenamento persistente. Essas funções são fundamentais para a interação com o usuário e para o processamento de dados em programas C.
-* **stdlib.h**: é usada para alocar os itens dinamicamente na memória.
-* **string.h**: é uma biblioteca que traz diversas funções importantes sobre string, uma das usadas no trabalho foi a 'strcmp'
+* **Stdio.h**: possui as funções printf e scanf em C são essenciais para exibir dados formatados na tela e capturar entrada do usuário, respectivamente. Enquanto fprintf e fscanf são usadas para escrever e ler dados formatados em arquivos, permitindo manipulação eficiente de informações em contextos de armazenamento persistente. Essas funções são fundamentais para a interação com o usuário e para o processamento de dados em programas C.
+* **Stdlib.h**: é usada para alocar os itens dinamicamente na memória.
+* **String.h**: é uma biblioteca que traz diversas funções importantes sobre string, uma das usadas no trabalho foi a 'strcmp'.
 
 ### Menu
 
