@@ -1,5 +1,6 @@
 # Trabalho de Aeds - Hotel Descanso Garantido
 
+* Nome
    
 ## Descrição
 
@@ -42,3 +43,7 @@ Digite a opcao desejada:
 * **print_file(cliente cli[], funcionario fun[], estadia est[], quarto qua[])**: a função tem como paramêtro todas as structs do projeto, sendo a cliente, funcionario, estadia e quarto, no qual ela printa todas as informações em seus devidos txts, sendo respectivamente, clientes.txt, funcionarios.txt, estadias.txt, quartos.txt, sendo a primeira linha a quantidade total de cada elemento do arquivo, e depois cada uma de suas informações sendo separadas por um ?
 * **read_file(cliente cli[], funcionario fun[], estadia est[], quarto qua[])**: uma função usada para scanear todas as informações já armazenadas nos arquivos.
 * **main()**: e a função main onde possui o menu, o chamado de cada função e a declaração das structs.
+
+## Quartos
+
+* É importante ressaltar que oos quartos do hotel já estão cadastrados no arquivo txt chamado quartos, sendo possivel adicionar novos caso necessário.
