@@ -1,34 +1,34 @@
 # Trabalho de Aeds - Hotel Descanso Garantido
 
-* Nome
+* Gabriel Peçanha Diniz
+* Tiago Boaventura Amaral
    
 ## Descrição
 
 O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, com um forte compromisso em proporcionar um excelente atendimento e fidelizar seus clientes. O hotel conta com uma equipe composta por recepcionistas, auxiliares de limpeza, garçons e um gerente. Até o momento, o hotel realizava o controle de estadias, clientes e funcionários através de planilhas do Excel e registros em cadernos, o que frequentemente resultava em problemas organizacionais, incluindo conflitos de reserva, onde um mesmo quarto era reservado para mais de um cliente. Por isso, foi desenvolvido um sistema em linguagem C para resolver esses problemas e melhorar a eficiência operacional.
+
+### Menu
+
+    ---------------------------------
+         HOTEL DESCANSO GARANTIDO
+    ---------------------------------
+    1. Cadastrar Cliente
+    2. Cadastrar Funcionario
+    3. Cadastrar Estadia
+    4. Cadastrar Quarto
+    5. Mostrar estadia do Cliente
+    6. Pesquisar Cliente
+    7. Pesquiasar Funcionario
+    8. Dar Baixa na Estadia
+    9. Encerrar programa
+    
+    Digite a opcao desejada: 
 
 ## Bibliotecas Usadas
 
 * **Stdio.h**: possui as funções printf e scanf em C são essenciais para exibir dados formatados na tela e capturar entrada do usuário, respectivamente. Enquanto fprintf e fscanf são usadas para escrever e ler dados formatados em arquivos, permitindo manipulação eficiente de informações em contextos de armazenamento persistente. Essas funções são fundamentais para a interação com o usuário e para o processamento de dados em programas C.
 * **Stdlib.h**: é usada para alocar os itens dinamicamente na memória.
 * **String.h**: é uma biblioteca que traz diversas funções importantes sobre string, uma das usadas no trabalho foi a 'strcmp'.
-
-### Menu
-
-- **Descrição**: Esse é a imagem principal do nosso menu, no qual já vem com quartos cadastrados em seu txt e é possível escolher as demais opções com suas devidas telas.
-- **Estrutura**:
-
-========== Menu Principal ==========
-1. Cadastrar Cliente
-2. Cadastrar Funcionario
-3. Cadastrar Estadia
-4. Exibir Estadia de Cliente
-5. Dar Baixa em Estadia
-6. Pesquisar
-7. Sair
-   
-====================================
-
-Digite a opcao desejada: 
 
 ## Funções utilizadas no projeto
 
