@@ -1,0 +1,5 @@
+4
+1;5;250.00;ocupado
+2;8;1000.00;desocupado
+3;3;200.00;desocupado
+4;5;500.00;desocupado
