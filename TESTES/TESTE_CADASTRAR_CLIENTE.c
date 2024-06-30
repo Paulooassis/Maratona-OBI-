@@ -1,50 +1,66 @@
-#include <assert.h>
 #include <stdio.h>
+#include <stdbool.h>
 
-// Definição das estruturas
-typedef struct {
-    int codigo;
-    char nome[100];
-    char endereco[100];
-    char telefone[20];
-} cliente;
-
-typedef struct {
-    cliente cli[100];
-    int totcli;
-} hotel;
-
-// Função para cadastrar um novo cliente no hotel
-void cadastrarcliente(hotel *h, const char *nome, const char *endereco, const char *telefone) {
-    h->cli[h->totcli].codigo = h->totcli + 1;
-    snprintf(h->cli[h->totcli].nome, sizeof(h->cli[h->totcli].nome), "%s", nome);
-    snprintf(h->cli[h->totcli].endereco, sizeof(h->cli[h->totcli].endereco), "%s", endereco);
-    snprintf(h->cli[h->totcli].telefone, sizeof(h->cli[h->totcli].telefone), "%s", telefone);
-    h->totcli++;
-    printf("Cliente cadastrado com sucesso !!\n\n");
+// Função que queremos testar
+int soma(int a, int b) {
+    return a + b;
 }
 
-// Função de teste para cadastrarcliente
-void test_cadastrarcliente() {
-    hotel h;
-    h.totcli = 0;
+// Estrutura para armazenar informações sobre o caso de teste
+typedef struct {
+    int input1;
+    int input2;
+    int expected_output;
+    int actual_output;
+    bool passed;
+} TestCase;
 
-    // Chamando a função para cadastrar cliente com parâmetros simulados
-    cadastrarcliente(&h, "João Silva", "Rua A, 123", "12345-6789");
+// Função para testar um caso específico
+TestCase run_test(int a, int b, int expected) {
+    TestCase test;
+    test.input1 = a;
+    test.input2 = b;
+    test.expected_output = expected;
+    test.actual_output = soma(a, b);
+    test.passed = (test.actual_output == test.expected_output);
+    return test;
+}
 
-    // Verificação dos dados cadastrados
-    assert(h.totcli == 1);
-    assert(h.cli[0].codigo == 1);
-    assert(strcmp(h.cli[0].nome, "João Silva") == 0);
-    assert(strcmp(h.cli[0].endereco, "Rua A, 123") == 0);
-    assert(strcmp(h.cli[0].telefone, "12345-6789") == 0);
-
-    printf("Teste de cadastrarcliente passou!\n");
+// Função para gerar o relatório de execução de testes
+void generate_report(TestCase tests[], int num_tests) {
+    FILE *file = fopen("test_report.txt", "w");
+    if (file == NULL) {
+        printf("Erro ao criar o arquivo de relatório.\n");
+        return;
+    }
+    fprintf(file, "Relatório de Execução de Testes\n");
+    fprintf(file, "===============================\n\n");
+    for (int i = 0; i < num_tests; i++) {
+        fprintf(file, "Caso de Teste %d:\n", i + 1);
+        fprintf(file, "Entrada: (%d, %d)\n", tests[i].input1, tests[i].input2);
+        fprintf(file, "Saída Esperada: %d\n", tests[i].expected_output);
+        fprintf(file, "Saída Real: %d\n", tests[i].actual_output);
+        fprintf(file, "Resultado: %s\n\n", tests[i].passed ? "Passou" : "Falhou");
+    }
+    fclose(file);
 }
 
 int main() {
-    // Chamada da função de teste
-    test_cadastrarcliente();
+    // Definir casos de teste
+    TestCase tests[] = {
+        run_test(1, 2, 3),
+        run_test(-1, 1, 0),
+        run_test(0, 0, 0),
+        run_test(-5, -7, -12),
+        run_test(1000, 2000, 3000)
+    };
+
+    int num_tests = sizeof(tests) / sizeof(tests[0]);
+
+    // Gerar o relatório de execução de testes
+    generate_report(tests, num_tests);
+
+    printf("Os testes foram executados. Verifique o arquivo 'test_report.txt' para o relatório.\n");
 
     return 0;
 }
